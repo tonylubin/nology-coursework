@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: #1a1f23;
+}
+
+nav {
+  height: 10vh;
+  width: 100%;
+  background-color: #1a1f23;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav a {
+  color: #c3dcaf;
+  text-decoration: none;
+}
+
+main {
+  background-color: #1a1f23;
+  color: #fff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-page {
+  height: 90vh;
+  color: #c3dcaf;
+  background-image: url(images/chris-ried-ieic5Tq8YMk-unsplash.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing-page__greeting {
+  line-height: 1.6;
+  margin-left: 1em;
+  padding: 2em;
+}
+.landing-page__greeting--bold {
+  font-weight: bold;
+}
+.landing-page__greeting--unbold {
+  font-weight: normal;
+}
+
+header {
+  text-align: center;
+  color: #3e92cc;
+  padding: 2em;
+}
+
+.card {
+  background-color: #343e46;
+  border-radius: 5px;
+  padding: 1em;
+  width: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills {
+  padding: 2em 0;
+}
+.skills__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1em;
+  row-gap: 1em;
+  justify-items: center;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.projects__image {
+  height: 40vh;
+}
+.projects__info {
+  height: 80vh;
+  border-top: 2px solid #3e92cc;
+  border-bottom: 2px solid #3e92cc;
+  padding: 2em 0em;
+}
+.projects__info__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+
+.projects h2 {
+  padding-bottom: 1em;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+.contact a {
+  color: #c3dcaf;
+  display: block;
+  margin-top: 30px;
+  text-decoration: none;
+  width: min-content;
+}
+.contact p {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.contact__email {
+  display: flex;
+  align-items: baseline;
+}
+.contact__email i {
+  margin-left: 0.3em;
+}
+
+button {
+  border-radius: 5px;
+  color: #c3dcaf;
+  background-color: #343e46;
+  padding: 1em;
+}
+
+@media only screen and (min-width: 576px) {
+  .skills__cards {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 3em;
+  }
+
+  .card {
+    width: 90px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .skills__cards {
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 3em;
+  }
+
+  .card {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+  }
+
+  .landing-page__greeting {
+    font-size: 1.7em;
+    line-height: 1.6;
+  }
+
+  .contact {
+    align-items: flex-start;
+    padding: 2em 2em 2em 0em;
+    font-size: 1.2em;
+  }
+
+  .projects {
+    flex-direction: row;
+  }
+  .projects__info {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #3e92cc;
+    border-right: 2px solid #3e92cc;
+    border-top: unset;
+    border-bottom: unset;
+    padding: 2em;
+  }
+  .projects__info__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  .projects__image {
+    width: 65%;
+  }
+}
