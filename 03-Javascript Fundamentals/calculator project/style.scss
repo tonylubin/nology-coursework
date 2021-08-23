@@ -4,14 +4,26 @@
   padding: 0;
 }
 
-#screen {
+.screen {
   width: 600px;
   height: 200px;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 45px;
+  padding-right: 37.5px;
+  border-radius: 18px 18px 0px 0px;
+
+  &_inner {
+    border-radius: 18px;
+    box-shadow: inset 0px 0px 10px rgb(24, 23, 23);
+    background-color: rgb(24, 23, 23);
+    width: 525px;
+    height: 100px;
+    text-align: right;
+    line-height: 100px;
+    padding-right: 10px;
+  }
 }
 
 #output {
@@ -22,12 +34,13 @@
 #calc-body {
   width: 600px;
   height: 500px;
-  background-color: blanchedalmond;
+  background-color: #f6f6f6;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
+  border-radius: 0px 0px 18px 18px;
 }
 
 main {
@@ -35,11 +48,22 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
 }
 
 button {
   width: 75px;
   height: 75px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 15px;
+  background: #e0e0e0;
+  box-shadow: inset 18px -18px 36px #cacaca, inset -18px 18px 36px #f6f6f6;
+}
+
+#equals {
+  color: green;
+}
+
+#cancel, #brackets, #percent, #divide, #times, #minus, #plus, #decimal-point, #back {
+  color: rgb(255, 153, 0);
 }
