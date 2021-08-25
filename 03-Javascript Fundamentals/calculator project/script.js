@@ -6,7 +6,7 @@ const divisionButton = document.getElementById("divide"); //  divide
 const decimalButton = document.getElementById("percent"); //  %
 const parenthesesButton = document.getElementById("brackets"); //  ()
 const resetButton = document.getElementById("cancel"); //   cancel (C)
-const backspaceButton = document.getElementById("back"); //  backspace
+const deleteButton = document.getElementById("delete"); //  delete
 const calcScreen = document.getElementById("output"); //  output screen
 const buttons = document.querySelectorAll(".digit"); // values & numbers printed onto screen
 
@@ -28,7 +28,7 @@ const clearScreen = resetButton.addEventListener("click", () => {
 
 //  backspace
 
-const backspace = backspaceButton.addEventListener("click", () => {
+const backspace = deleteButton.addEventListener("click", () => {
   calcScreen.lastChild.remove();
 });
 
