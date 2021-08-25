@@ -60,6 +60,12 @@ button {
   box-shadow: 2px 3px 1px #ccccccbf, -2px -3px #ffffffc7;
 }
 
+button:active {
+  border-radius: 50px;
+  background: #f7f6f6;
+  box-shadow: inset 6px 6px 12px #d2d1d1, inset -6px -6px 12px #ffffff;
+}
+
 #equals {
   color: green;
 }
