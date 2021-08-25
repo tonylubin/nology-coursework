@@ -4,7 +4,6 @@ const minusButton = document.getElementById("minus"); //  -
 const multiplyButton = document.getElementById("times"); //  *
 const divisionButton = document.getElementById("divide"); //  divide
 const decimalButton = document.getElementById("percent"); //  %
-const parenthesesButton = document.getElementById("brackets"); //  ()
 const resetButton = document.getElementById("cancel"); //   cancel (C)
 const deleteButton = document.getElementById("delete"); //  delete
 const calcScreen = document.getElementById("output"); //  output screen
