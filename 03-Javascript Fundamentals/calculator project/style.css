@@ -7,7 +7,7 @@
 .screen {
   width: 320px;
   height: 200px;
-  background-color: #ffffffbf;
+  background-color: #f9f9f9f0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -32,7 +32,7 @@
 #calc-body {
   width: 320px;
   height: 500px;
-  background-color: #ffffffbf;
+  background-color: #f9f9f9f0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
@@ -47,7 +47,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: lightgrey;
+  background-color: #6a6f79;
 }
 
 button {
