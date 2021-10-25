@@ -11,22 +11,23 @@ const wheelImage = document.querySelector(".wheelimage");
 const keyboard1 = document.querySelector(".keyboard");
 const wheelbox = document.querySelector(".wheel-box");
 const keyboardSlidein = document.querySelector(".keyboard-slidein");
+const hint = document.querySelector("#hint");
 
 // explicitly add spaces in answers to allow for word wrap effect/visual styling 
 const guessData = [
-  "HOLE IN ONE",  // SPORTING TERMINOLOGY
-  "EMPIRE STATEBUILDING",  // LANDMARK
-  "TWO HEADS   ARE BETTER  THAN ONE",  //SAYING
-  "A BEAUTIFUL MIND ",  // OSCAR WINNING FILM
-  "WUTHERING   HEIGHTS",  // SONG TITLE
-  "TO KILL A   MOCKING BIRD",  // BOOK
-  "MONTEVIDEO",  // CAPITAL CITY
-  "HAMILTON    ACADEMICAL",  // SCOTTISH FOOTBALL TEAM 
-  "SOUP LADLE",  // IN THE KITCHEN
-  "APPLE       STRUDEL", //DESSERT
-  "SOFTWARE    ENGINEER",  // OCCUPATION
-  "RED DWARF",  // BRITISH COMEDY SHOW
-  "CZECH KORUNA" // CURRENCY
+  ["SPORTING TERMINOLOGY", "HOLE IN ONE"],   
+  ["LANDMARK", "EMPIRE STATEBUILDING"],  
+  ["SAYING", "TWO HEADS   ARE BETTER  THAN ONE"],  
+  ["OSCAR WINNING FILM", "A BEAUTIFUL MIND "],  
+  ["SONG TITLE", "WUTHERING   HEIGHTS"],  
+  ["BOOK", "TO KILL A   MOCKING BIRD"],
+  ["CAPITAL CITY", "MONTEVIDEO"],  
+  ["SCOTTISH FOOTBALL TEAM", "HAMILTON    ACADEMICAL"],  
+  ["IN THE KITCHEN", "SOUP LADLE"],
+  ["DESSERT", "APPLE       STRUDEL"], 
+  ["OCCUPATION", "SOFTWARE    ENGINEER"],  
+  ["BRITISH COMEDY SHOW", "RED DWARF"],  
+  ["CURRENCY", "CZECH KORUNA"] 
 ];
 
 let dataCopy = [...guessData]; // copy data array so don't mutate original
@@ -40,7 +41,8 @@ let boardArrayCopy;  // to check for length comparison with original for winning
 wordButton.addEventListener("click", () => {
   clearBoard();
   boardArray = [];
-  let guessDataCopy = dataCopy[0];
+  let guessDataCopy = dataCopy[0][1];
+  hint.innerText = dataCopy[0][0];
   let letters = guessDataCopy.split("");
   keyboardReset();
 
@@ -276,6 +278,7 @@ restartButton.addEventListener("click", () => {
   player1.updateScore();
   player1.updatePlayerStatus();
   letterPointsIndicator.innerText = "Points";
+  hint.innerText = "Hint";
 });
 
 // keyboard slide-in
