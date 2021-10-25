@@ -90,20 +90,31 @@ function boardIndex() {
   }
 }
 
+// alerts
+
+const warningAlert = (text,type) => { 
+  notie.alert({
+  type: type, // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
+  text: text,
+  stay: false, // optional, default = false
+  time: 3, // optional, default = 3, minimum = 1,
+  position: "top" // optional, default = 'top', enum: ['top', 'bottom']
+})
+};
+
 // winning check for round & overall game
 
 const winCheck = () => {
   if (boardArrayCopy.length === 0 && dataCopy.length === 0) {
     if(player1.score === player2.score) {
-      alert("It's a drawn game!!!")
+      warningAlert("It's a drawn game!!!","success")
     } else if(player1.score > player2.score) {
-      alert("Player 1 you are the overall winner!");
+      warningAlert("The overall Champion is:<br>**Player 1**","success");
     } else {
-      alert("Player 2 you are the overall winner");
+      warningAlert("The overall Champion is:<br>**Player 2**","success");
     }
   } else if (boardArrayCopy.length === 0) {
-    alert("You solved the puzzle!");
-    alert("Press game to continue to the next round");    
+    warningAlert("You solved the puzzle!<br>Press game to continue to the next round","success");    
   }
 };
 
@@ -174,7 +185,7 @@ let playerIndex = 0;
 // check player score/turn
 
 function playerTurns() {
-    alert("Round goes to the next player");  
+    warningAlert("Wrong guess!<br>Round goes to the next player","error");  
     if (players[playerIndex] === player1) {
       playerIndex = 1;
       players[playerIndex].updatePlayerStatus();
@@ -233,13 +244,13 @@ spinButton.addEventListener("click", () => {
 wheelImage.addEventListener("transitionend", () => {
   switch (pointsSegment) {
     case "You're bankrupt":
-      alert(pointsSegment);
+      warningAlert(`${pointsSegment}`,"error");
       players[playerIndex].score = 0;
       letterPointsIndicator.innerHTML = pointsSpin[11];
       setTimeout(playerTurns, 500);
       break;
     case "You lose a turn":
-      alert(pointsSegment);
+      warningAlert(`${pointsSegment}`,"error");
       letterPointsIndicator.innerHTML = pointsSpin[7];
       setTimeout(playerTurns, 500);
       break;
