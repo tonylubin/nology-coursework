@@ -36,7 +36,7 @@ let boardArray; // represents letters to guess on board
 
 let boardArrayCopy;  // to check for length comparison with original for winning check
 
-// apply word to board to guess
+// apply word to board to guess and update hint clue text
 
 wordButton.addEventListener("click", () => {
   clearBoard();
@@ -123,7 +123,9 @@ key.forEach((letter) => {
     letter.style.backgroundColor = "transparent";
     players[playerIndex].updateScore();
     setTimeout(winCheck, 300);
-    setTimeout(playerTurns, 600);
+    if(players[playerIndex].previousScore >= players[playerIndex].score){
+      playerTurns();
+    }
   });
 });
 
@@ -172,8 +174,7 @@ let playerIndex = 0;
 // check player score/turn
 
 function playerTurns() {
-  if (players[playerIndex].previousScore >= players[playerIndex].score) {
-    nextRoundAlert();
+    alert("Round goes to the next player");  
     if (players[playerIndex] === player1) {
       playerIndex = 1;
       players[playerIndex].updatePlayerStatus();
@@ -184,11 +185,6 @@ function playerTurns() {
       players[playerIndex].updateScore();
     }
   }
-}
-
-// alert function
-
-const nextRoundAlert = () => alert("Round goes to the next player");
 
 // wheel object
 
@@ -231,6 +227,7 @@ spinButton.addEventListener("click", () => {
   wheelImage.style.transition = "3s ease";                 //  add 7.5 deg for wheel image offset and determine value of wheel segment with index to wheel object
   wheelImage.style.transform = `rotate(${deg}deg)`;       
   pointsSegment = pointsSpin[wheelSegment];
+  console.log(pointsSegment);
 });
 
 wheelImage.addEventListener("transitionend", () => {
@@ -238,23 +235,13 @@ wheelImage.addEventListener("transitionend", () => {
     case "You're bankrupt":
       alert(pointsSegment);
       players[playerIndex].score = 0;
-      players[playerIndex].updatePlayerStatus();
-      players[playerIndex].updateScore();
       letterPointsIndicator.innerHTML = pointsSpin[11];
       setTimeout(playerTurns, 500);
       break;
     case "You lose a turn":
       alert(pointsSegment);
       letterPointsIndicator.innerHTML = pointsSpin[7];
-      if (players[playerIndex] === player1) {
-        playerIndex = 1;
-        players[playerIndex].updatePlayerStatus();
-        players[playerIndex].updateScore();
-      } else {
-        playerIndex = 0;
-        players[playerIndex].updatePlayerStatus();
-        players[playerIndex].updateScore();
-      }
+      setTimeout(playerTurns, 500);
       break;
     default:
       letterPointsIndicator.innerHTML = `Guess a letter for ${pointsSegment} points each`;
