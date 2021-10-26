@@ -1,16 +1,16 @@
-const spinButton = document.querySelector(".hit");
+const spinButton = document.querySelector(".wheel-action__hit");
 const outerWheel = document.querySelector(".outer-wheel");
-const wordButton = document.querySelector(".push");
-const letterSquare = document.querySelectorAll(".letter-square");
-const restartButton = document.querySelector(".restart");
-const key = document.querySelectorAll(".key");
+const wordButton = document.querySelector(".game-buttons__push");
+const letterSquare = document.querySelectorAll(".board__letter-square");
+const restartButton = document.querySelector(".game-buttons__restart");
+const key = document.querySelectorAll(".keyboard__key");
 const playerTitle = document.querySelector(".player");
 const scorecard = document.querySelector(".score");
 const letterPointsIndicator = document.querySelector("#letter-points");
 const wheelImage = document.querySelector(".wheelimage");
 const keyboard1 = document.querySelector(".keyboard");
 const wheelbox = document.querySelector(".wheel-box");
-const keyboardSlidein = document.querySelector(".keyboard-slidein");
+const keyboardSlidein = document.querySelector(".wheel-action__keyboard-slidein");
 const hint = document.querySelector("#hint");
 
 // explicitly add spaces in answers to allow for word wrap effect/visual styling 
@@ -49,7 +49,7 @@ wordButton.addEventListener("click", () => {
   for (let i = 0; i < letters.length; i++) {
     if (letters[i] !== " ") {
       letterSquare[i].style.backgroundColor = "#fff9f9";
-      letterSquare[i].classList.add("letter-square_guess");
+      letterSquare[i].classList.add("board__letter-square--guess");
       letterSquare[i].innerHTML = letters[i];
       letterSquare[i].style.color = "#fff9f9";
     } else {
@@ -90,7 +90,7 @@ function boardIndex() {
   }
 }
 
-// alerts
+// alerts ---> notie.js
 
 const warningAlert = (text,type) => { 
   notie.alert({
@@ -238,7 +238,6 @@ spinButton.addEventListener("click", () => {
   wheelImage.style.transition = "3s ease";                 //  add 7.5 deg for wheel image offset and determine value of wheel segment with index to wheel object
   wheelImage.style.transform = `rotate(${deg}deg)`;       
   pointsSegment = pointsSpin[wheelSegment];
-  console.log(pointsSegment);
 });
 
 wheelImage.addEventListener("transitionend", () => {
@@ -275,8 +274,8 @@ restartButton.addEventListener("click", () => {
   player1.score = 0;
   player1.updateScore();
   player1.updatePlayerStatus();
-  letterPointsIndicator.innerText = "Points";
-  hint.innerText = "Hint";
+  hint.innerHTML = `Press <span class = "text-holder__underline">GAME</span> to begin and <span class = "text-holder__underline">SPIN</span> to start playing`;
+  letterPointsIndicator.innerHTML = `Press <span class = "text-holder__underline">KEYBOARD</span> to toggle keyboard <span class = "text-holder__underline">ON/OFF</span>`;
 });
 
 // keyboard slide-in
