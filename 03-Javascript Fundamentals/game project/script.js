@@ -140,35 +140,26 @@ key.forEach((letter) => {
   });
 });
 
-// player 1
+// player class constructor
 
-let player1 = {
-  name: "Player 1",
-  score: 0,
-  previousScore: parseInt(scorecard.innerText),
-
+class Player {
+  constructor(name,score,previousScore){
+    this.name = name;
+    this.score = score;
+    this.previousScore = previousScore;
+  }
   updateScore() {
     scorecard.innerHTML = this.score;
-  },
+  }
   updatePlayerStatus() {
     playerTitle.innerHTML = this.name;
-  },
-};
+  }
+}
 
-// player 2
+// players
 
-let player2 = {
-  name: "Player 2",
-  score: 0,
-  previousScore: parseInt(scorecard.innerText),
-
-  updateScore() {
-    scorecard.innerHTML = this.score;
-  },
-  updatePlayerStatus() {
-    playerTitle.innerHTML = this.name;
-  },
-};
+let player1 = new Player("Player 1", 0, parseInt(scorecard.innerText));
+let player2 = new Player("Player 2", 0, parseInt(scorecard.innerText));
 
 // letter points
 
