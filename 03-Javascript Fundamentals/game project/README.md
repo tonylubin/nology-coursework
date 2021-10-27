@@ -4,7 +4,7 @@
 
 As part of my software development course at Nology we were instructed to build a Javascript browser based game.  
 
-This is one of my very first projects ,implementing what we have learnt on the course thus far, using functions, arrays and objects.
+This is one of my very first projects ,implementing what we have learnt on the course thus far, using functions, arrays, classes and objects.
 
 I have adopted a Mobile-first based design process with responsiveness across mobile, tablet and laptop devices. It is written
 with SCSS and implemented with the BEM convention. 
