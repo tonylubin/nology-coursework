@@ -92,6 +92,7 @@ label {
   height: 20%;
   display: flex;
   justify-content: space-around;
+  padding-top: 20px;
 
   &__image {
     background-image: url(./morsecode.png);
@@ -103,7 +104,6 @@ label {
 }
 
 .image-container > p {
-  padding: 15px;
   width: 40%;
   font-size: 1.2rem;
   line-height: 1.3em;

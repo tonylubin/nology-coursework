@@ -1,7 +1,7 @@
 const button = document.querySelector("button");
 const inputBox = document.querySelector("input");
-const outputBox = document.querySelector(".output-box");
-const selection = document.querySelector("#options_language");
+const outputBox = document.querySelector(".container__output-box");
+const selection = document.querySelector("#options__language");
 const container = document.querySelector(".container");
 
 const englishAlphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"," "];
@@ -46,7 +46,6 @@ selection.addEventListener("change", () => {
 
     // nodelist to check selected option on dropdown
     let translatorOptions = selection.options[selection.selectedIndex].value;
-    console.log(translatorOptions)
     
     // instance of "english to morse translator"
     if(translatorOptions === "english"){
