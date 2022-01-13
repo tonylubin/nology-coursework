@@ -1,0 +1,24 @@
+.cardDisplay {
+  position: relative;
+  height: 500px;
+  width: 300px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  perspective: 600px;
+
+  &__front {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+
+  &__back {
+    position: absolute;
+    transform: rotateY(180deg);  // for backward perspective(when flipped reads left to right)
+    backface-visibility: hidden;
+  }
+}
+
+.cardDisplay:hover {
+    transform: rotateY(180deg);
+}
+
