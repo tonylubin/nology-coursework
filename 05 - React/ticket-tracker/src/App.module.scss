@@ -1,0 +1,19 @@
+main {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background-color: #F1f1f1;
+    overflow: hidden;
+}
+
+.cardHolder {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(5, 1fr);
+    height: 90%;
+    width: 100%;
+    padding: 10px;
+    color: #202020;
+}

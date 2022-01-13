@@ -1,0 +1,23 @@
+.counterContainer {
+    height: 50%;
+    padding-top: 1rem;
+}
+
+h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.buttonAction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+
+  &__button {
+    padding: 5px 10px;
+    background-color: #1c4e80;
+    border-radius: 5px;
+    color: #fff;
+  }
+}
