@@ -6,9 +6,9 @@ Tasked with building a project in REACT JS that utilises BrewDog's PUNK Api
 
 (1) ability to search for beers via name/letter and page will update while user types each letter  
 (2) can filter content on 3 conditions:   
-    (i) High Alcohol (ABV value greater than 6%)  
-    (ii) Classic Range (was first brewed before 2010)  
-    (iii) High Acidity (ph lower than 4)  
+    - High Alcohol (ABV value greater than 6%)  
+    - Classic Range (was first brewed before 2010)  
+    - High Acidity (ph lower than 4)  
 
 # Design/Display: 
 
