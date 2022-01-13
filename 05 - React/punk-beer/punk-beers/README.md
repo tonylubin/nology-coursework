@@ -1,8 +1,8 @@
-### BEER FINDER APP ###
+# BEER FINDER APP
 
 Tasked with building a project in REACT JS that utilises BrewDog's PUNK Api
 
-# Outcomes:
+# Outcomes: #
 
 (1) ability to search for beers via name/letter and page will update while user types each letter  
 (2) can filter content on 3 conditions:   
@@ -10,7 +10,7 @@ Tasked with building a project in REACT JS that utilises BrewDog's PUNK Api
     - Classic Range (was first brewed before 2010)  
     - High Acidity (ph lower than 4)  
 
-# Design/Display: 
+# Design/Display: # 
 
 - Created a beer finder app that displays the beers on the web page in a card format using CSS Grid
 - applied a hover css styling option to flip card for more information
@@ -19,7 +19,7 @@ Tasked with building a project in REACT JS that utilises BrewDog's PUNK Api
 - Navigation bar that has a fixed position to enable actions (filtering) to be performed by user whilst scrolling
 - CONTAINERS - of MAIN and NAVBAR to hold/handle state and functions
 
-# Functions:
+# Functions: #
 
 - using FETCH with async/await to get data from Api
 - search bar (input) that updates beers to be displayed in a useEffect Hook, fires only when search item is updated
@@ -27,5 +27,5 @@ Tasked with building a project in REACT JS that utilises BrewDog's PUNK Api
 - using useState Hook to hold data for beers data and filtered beer data
 - unit tested, where suitable, using JEST/ENZYME
  
-# RUN:
+# RUN: #
 - using Node.js type 'npm start'
