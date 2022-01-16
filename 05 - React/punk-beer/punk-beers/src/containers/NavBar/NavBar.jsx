@@ -6,7 +6,9 @@ import styles from "./NavBar.module.scss";
 const NavBar = ({
   setSearchItem,
   setBeersFiltered,
-  beersFiltered,
+  abvFilter,
+  classicFilter,
+  acidityFilter,
   allBeers,
 }) => {
   return (
@@ -14,7 +16,9 @@ const NavBar = ({
       <SearchBox setSearchItem={setSearchItem} />
       <FiltersList
         setBeersFiltered={setBeersFiltered}
-        beersFiltered={beersFiltered}
+        abvFilter={abvFilter}
+        acidityFilter={acidityFilter}
+        classicFilter={classicFilter}
         allBeers={allBeers}
       />
       <p className={styles.info}>Hover over Beer for more information</p>

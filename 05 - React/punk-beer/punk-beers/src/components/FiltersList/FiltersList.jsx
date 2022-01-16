@@ -1,21 +1,11 @@
 import React, {useState} from "react";
 import FilterItem from "../FilterItem/FilterItem";
 
-const FiltersList = ({ setBeersFiltered, beersFiltered, allBeers }) => {
+const FiltersList = ({ setBeersFiltered, classicFilter, abvFilter, acidityFilter, allBeers }) => {
   const [checkedCondition, setCheckedCondition] = useState({
     id: "",
     isChecked: false,
   });
-
-  //  filtering condition functions
-  const abvFilter = () => beersFiltered.filter((beer) => beer.abv > 6);
-
-  const classicFilter = () =>
-    beersFiltered.filter(
-      (beer) => parseInt(beer.first_brewed.substring(3)) < 2010
-    );
-
-  const acidityFilter = () => beersFiltered.filter((beer) => beer.ph < 4);
 
   // object for filter function variable name targeting
   const filterFuncs = {
