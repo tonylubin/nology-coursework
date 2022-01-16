@@ -17,7 +17,6 @@ Tasked with building a project in REACT JS that utilises BrewDog's PUNK Api
 - styled using SASS and utilised BEM convention
 - Fixed postion Header that hides main section of beers when scrolling
 - Navigation bar that has a fixed position to enable actions (filtering) to be performed by user whilst scrolling
-- CONTAINERS - of MAIN and NAVBAR to hold/handle state and functions
 
 # Functions: #
 
