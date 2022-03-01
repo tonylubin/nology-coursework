@@ -57,7 +57,7 @@ class Ship {
 //  Instance of Game
 const hostileAlienGame = new Game(270, enemySection);
 // Instance of Ships
-const motherShip = new Ship("mother-ship", "rgb(184, 16, 16)", 100, 100, 9, 12, 8);
+const motherShip = new Ship("mother-ship", "rgb(184, 16, 16)", 100, 100, 9, 12, 9);
 const defenceShip1 = new Ship("defence-ship1", "rgb(22, 22, 180)", 80, 80, 10, 8, 61);
 const defenceShip2 = new Ship("defence-ship2", "rgb(22, 22, 180)", 80, 80, 10, 8, 71);
 const defenceShip3 = new Ship("defence-ship3", "rgb(22, 22, 180)", 80, 80, 10, 8, 81);
