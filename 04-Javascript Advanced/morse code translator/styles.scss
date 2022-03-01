@@ -5,8 +5,8 @@
   font-size: 1.4rem;
 }
 
-$mainBackgroundColor: #f8f8ff;
-$boxBackgroundColor: #aeb5b7;
+$mainBackgroundColor: #F6F6FB; //#f8f8ff;
+$boxBackgroundColor: #2363CF; //#aeb5b7;
 
 body {
   height: 100vh;
@@ -100,6 +100,10 @@ label {
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  b {
+    text-decoration: underline #000;
   }
 }
 
